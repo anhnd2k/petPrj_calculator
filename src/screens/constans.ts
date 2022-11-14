@@ -1,4 +1,5 @@
 import { Dimensions } from 'react-native';
+import { icon_convert, icon_delete, icon_divide, icon_equal } from 'src/constants/images';
 
 export interface DataView {
 	id: number;
@@ -9,14 +10,15 @@ export interface DataView {
 export interface ExpressionType {
 	id: number;
 	text: string;
-	action: string;
-	onPress: () => void;
+	source?: any;
+	type: 'num' | 'epx';
+	caculate: string;
 }
 
 const dataView: DataView[] = [
 	{
 		id: 1,
-		height: Dimensions.get('screen').height,
+		height: Dimensions.get('screen').height - 90,
 		background: '#ccc',
 	},
 	{
@@ -29,162 +31,126 @@ const expression: ExpressionType[] = [
 	{
 		id: 20,
 		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		type: 'epx',
+		caculate: '',
 	},
 	{
 		id: 19,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '',
+		source: icon_delete,
+		type: 'epx',
+		caculate: '',
 	},
 	{
 		id: 18,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '%',
+		type: 'epx',
+		caculate: '',
 	},
 	{
 		id: 17,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '',
+		source: icon_divide,
+		type: 'epx',
+		caculate: '',
 	},
 	{
 		id: 16,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '7',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 15,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '8',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 14,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '9',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 13,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: 'x',
+		type: 'epx',
+		caculate: '',
 	},
 	{
 		id: 12,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '4',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 11,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '5',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 10,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '6',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 9,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '-',
+		type: 'epx',
+		caculate: '',
 	},
 	{
 		id: 8,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '1',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 7,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '2',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 6,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '3',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 5,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '+',
+		type: 'epx',
+		caculate: '',
 	},
 	{
 		id: 4,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: 'CONVERT',
+		source: icon_convert,
+		type: 'epx',
+		caculate: '',
 	},
 	{
 		id: 3,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: '0',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 2,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: ',',
+		type: null,
+		caculate: '',
 	},
 	{
 		id: 1,
-		text: 'C',
-		action: null,
-		onPress: () => {
-			console.log('C');
-		},
+		text: 'EQUAL',
+		source: icon_equal,
+		type: 'epx',
+		caculate: '',
 	},
 ];
 
