@@ -11,8 +11,6 @@ function resolveCalculator(dataArr2){
 	        const spliceSpx = newDataClone.splice(i + 1, findIndexEnd - 1)
 	        const data1 = resolveCalculator(spliceSpx)
 	        dataIn.splice(i, findIndexEnd + 1, data1)
-	    }else{
-	        break
 	    }
     }
     
